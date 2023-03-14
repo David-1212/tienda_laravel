@@ -59,7 +59,9 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        return view('producto.edit',compact('producto'));
+        
+        return view('productos.editp',compact('producto'));
+        
     }
 
     /**
@@ -67,7 +69,21 @@ class ProductoController extends Controller
      */
     public function update(Request $request, Producto $producto)
     {
-        //
+        
+        $request->validate([
+            'nombrep' => ['required', 'string', 'max:40', 'min:5'],
+            'precio' => ['required', 'numeric', 'min:1'],
+            'descripcion' => ['required', 'string', 'min:5', 'max:200'],
+        ]);
+
+
+        $producto->nombrep = $request->nombrep;
+        $producto->precio = $request->precio;
+        $producto->descripcion = $request->descripcion;
+
+        $producto->save();
+
+        return redirect('/producto');
     }
 
     /**
@@ -75,6 +91,8 @@ class ProductoController extends Controller
      */
     public function destroy(Producto $producto)
     {
-        //
+        
+        $producto->delete();
+        return redirect('/producto');
     }
 }

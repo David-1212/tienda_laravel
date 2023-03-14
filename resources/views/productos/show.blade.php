@@ -11,6 +11,12 @@
     <h3>{{ $producto->nombrep }}</h3>
     <h3>{{ $producto->precio }}</h3>
     <h3>{{ $producto->descripcion }}</h3>
-    <a href="/producto">Editar</a>
+
+    <form method="POST" action="/producto/{{ $producto->id }}">
+        @csrf
+        @method('DELETE')
+        <button type="submit">Eliminar</button>
+    </form>
+        
 </body>
 </html>

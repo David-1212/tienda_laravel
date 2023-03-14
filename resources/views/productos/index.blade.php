@@ -15,9 +15,11 @@
         <h4>Producto No.{{$producto->id}}</h4>
         <ul>
             <li><b>Nombre:</b>{{ $producto->nombrep }}</li>
-            <li><b>Costo: </b> {{ $producto->Precio }}</li>
+            <li><b>Costo: </b> {{ $producto->precio }}</li>
             <li><b>Descripción:</b>  {{ $producto->descripcion }}</li>
             <a href="/producto/{{ $producto->id }}">Ver Detalle</a><br>
+            <a href="/producto/{{ $producto->id}}/edit">Editar</a><br>
+            
            
         </ul>
         

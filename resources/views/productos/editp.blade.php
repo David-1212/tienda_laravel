@@ -4,31 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Editar</title>
 </head>
 <body>
-    <h1>Crear productos</h1>
-    <form action="/producto{{$producto->id}}" method="post">
+    <h1>Editar productos</h1>
+    <form action="/producto/{{ $producto->id }}" method="POST">
     @csrf
+    @method('PATCH')
+    
         <label for="nombrep">Nombre:</label><br>
-        <input type="text" name = "nombrep" id = "nombrep"><br><br>
-        @error('nombre')
+        <input type="text" name = "nombrep" value="{{old('nombrep')?:$producto->nombrep }}" id = "nombrep"  ><br><br>
+       
+        @error('nombrep')
             <h5>{{ $message }}</h5>
         @enderror
 
         <br>
 
         <label for="precio">Precio:</label><br>
-        <input type="double" name = "precio" id = "precio"><br><br>
-        @error('nombre')
+        <input type="double" name = "precio" id = "precio" value="{{old('precio')?:$producto->precio }} "><br><br>
+        @error('precio')
             <h5>{{ $message }}</h5>
         @enderror
 
         <br>
 
         <label for="descripcion">Descripción:</label><br>
-        <input type="text" name = "descripcion" id = "descripcion"><br><br>
-        @error('nombre')
+        <input type="text" name = "descripcion" id = "descripcion" value="{{old('descripcionp')?:$producto->descripcion }}"><br><br>
+        @error('descripcion')
             <h5>{{ $message }}</h5>
         @enderror
 

@@ -11,24 +11,24 @@
     <form action="/producto" method="post">
     @csrf
         <label for="nombrep">Nombre:</label><br>
-        <input type="text" name = "nombrep" id = "nombrep"><br><br>
-        @error('nombre')
+        <input type="text" name = "nombrep" id = "nombrep" value ="{{old('nombrep')}}"><br><br>
+        @error('nombrep')
             <h5>{{ $message }}</h5>
         @enderror
 
         <br>
 
         <label for="precio">Precio:</label><br>
-        <input type="double" name = "precio" id = "precio"><br><br>
-        @error('nombre')
+        <input type="double" name = "precio" id = "precio" value ="{{old('precio')}}"><br><br>
+        @error('precio')
             <h5>{{ $message }}</h5>
         @enderror
 
         <br>
 
         <label for="descripcion">Descripción:</label><br>
-        <input type="text" name = "descripcion" id = "descripcion"><br><br>
-        @error('nombre')
+        <input type="text" name = "descripcion" id = "descripcion" value ="{{old('descripcion')}}"><br><br>
+        @error('descripcion')
             <h5>{{ $message }}</h5>
         @enderror
 
