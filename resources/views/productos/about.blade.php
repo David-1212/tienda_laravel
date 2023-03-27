@@ -6,11 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>La </title>
+        <title>La Cruderia </title>
         <link rel="shortcut icon" href="{{asset('template/resources/img/agave.png')}}">
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="{{asset('template/css/styles.css')}}" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     </head>
     
     <body class="sb-nav-fixed">
@@ -71,131 +73,51 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Productos</h1>
+                        <h1 class="mt-4" style="text-align: center">Acerca de nosotros:</h1><br>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Productos Estrella</li>
+
                         </ol>
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Tequila</div>
-                                    <img src="{{asset('template/resources/tequila.webp')}}">
+                                    <div class="card-body">Ulises Vallejo</div>
+                                    <img src="{{asset('template/resources/team/ulises.jpg')}}">
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <details>
-                                        <summary>Ver detalles</summary>
-                                        Bebida alcohólica que se obtiene por fermentación y destilación del jugo de una variedad de maguey; es originaria de México.
-                                </details>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                            </div>
-                        </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Whisky</div>
-                                    <img src="{{asset('template/resources/Whisky.png')}}">
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <details>
-                                        <summary>Ver detalles</summary>
-                                        Bebida alcohólica de alta graduación que se obtiene por destilación de cebada y otros cereales.
-                                    </details>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                         
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">vodka</div>
-                                    <img src="{{asset('template/resources/vodka2.png')}}"height="345">
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <details>
-                                        <summary>Ver detalles</summary>
-                                        Es un destilado de proviene de la fermentación de patata, trigo, cebada, uva, remolacha y en general cualquier planta rica en almidón.
-                                    </details>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Ron</div>
-                                    <img src="{{asset('template/resources/ron.png')}}" >
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <details>
-                                        <summary>Ver detalles</summary>
-                                        El ron es una bebida alcohólica, elaborada a partir de la fermentación y destilación de la melaza o el jugo de la caña de azúcar.
-                                    </details>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Cerveza</div>
-                                    <img src="{{asset('template/resources/cerveza.webp')}}"height="300"  >
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <details>
-                                        <summary>Ver detalles</summary>
-                                        Bebida alcohólica de sabor amargo y color amarillento, más o menos oscuro, que se obtiene por fermentación de la cebada y se aromatiza con lúpulo.
-                                    </details>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Brandy</div>
-                                    <img src="{{asset('template/resources/brandy.png')}}" height="300" >
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <details>
-                                        <summary>Ver detalles</summary>
-                                        Es un aguardiente obtenido a través de la destilación del vino casi siempre con un 36-40 % (hasta un 60 %) de volumen de alcohol, al ser expedido al mercado.
-                                    </details>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Soju</div>
-                                    <img src="{{asset('template/resources/soju.png')}}"height="300" >
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <details>
-                                        <summary>Ver detalles</summary>
-                                        El soju es una bebida destilada nativa de Corea, tradicionalmente hecha con arroz.
-                                    </details>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Raicilla</div>
-                                    <img src="{{asset('template/resources/tequila.webp')}}"height="300" >
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <details>
-                                        <summary>Ver detalles</summary>
-                                        Bebida alcohólica que se obtiene por fermentación y destilación del jugo de una variedad de maguey; es originaria de México.
-                                </details>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                            </div>
-                        </div>  
-                    </div>
-
-                    <div class="row">
-                            <div class="col-xl-6">
+                                
+                        </div>
+                        <div class="col-xl-6">
                                 <div class="card mb-4">
                                     <div class="card-header">
-                                        <br><br><strong>Nuestro orgullo, escencia y valores </strong> <br><br>
-                                    </div ><p style="text-align: justify">LA CRUDERÍA es una empresa dedicada a la producción y comercialización de licor 100% puro 
-                                    para el deleite de los más exigentes paladares, difundiendo las tradiciones y valores distintivos 
-                                    de nuestra cultura Mexicana, gracias a los más altos estándares de calidad que ofrecemos en nuestros 
+                                        <br><br><strong>Quienes somos? </strong> <br><br>
+                                    </div ><p style="text-align: justify">En nombre del equipo de desarrolladores de La Crudería, como miembros de el Centro Universitario de Ciencias Exactas e Ingenierías CUCEI, compartimos nuestra colaboración para el desarrollo web del sitio de la empresa, fungiendo así tanto David Guadalupe Vargas López como José Ulises Vallejo Sierra en los diferentes requerimientos propuestos, tanto como el desarrollo de la base de datos y el CRUD en su tabla de productos de licores y sus respectivas migraciones, el uso de sesiones dentro del sitio con la herramienta Jetstream, las validacioness en los formularios, así como la implementación de frameworks (bootstrap) para la plantilla de los estilos CSS
                                     productos. </p>
                                     <p style="text-align: justify">Somos una empresa altamente competitiva y sobre todo 100% Mexicana superando las expectativas 
                                     de los consumidores, posicionándose sutilmente en el mercado Internacional.</p>
                                 </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-warning text-white mb-4">
+                                <div class="card-body">David Vargas</div>
+                                    <img src="{{asset('template/resources/team/david.jpg')}}">
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                        
+                                    </div>
                             </div>
+                        </div>   
+                    </div>
+                            
+
+
+                        
+                            
+
+                           
                     </div>
                     <footer class="py-4 bg-light mt-auto">
                         <div class="container-fluid px-4">
@@ -213,5 +135,6 @@
         <script src="{{asset('template/resources/demo/chart-bar-demo.js')}}"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="{{asset('template/js/datatables-simple-demo.js')}}datatables-simple-demo.js"></script>
+        
     </body>
 </html>
