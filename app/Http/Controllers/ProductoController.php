@@ -95,4 +95,5 @@ class ProductoController extends Controller
         $producto->delete();
         return redirect('/producto');
     }
+
 }

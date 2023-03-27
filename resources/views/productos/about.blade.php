@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>La cruderia</title>
+        <title>La </title>
         <link rel="shortcut icon" href="{{asset('template/resources/img/agave.png')}}">
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="{{asset('template/css/styles.css')}}" rel="stylesheet" />
@@ -51,7 +51,7 @@
                             </a>
                             
                             <div class="sb-sidenav-menu-heading">Crudería</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="../">
                                 <div class="sb-nav-link-icon"><i class="fas fa-school"></i></div>
                                 Home
                             </a>
