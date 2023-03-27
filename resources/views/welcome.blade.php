@@ -55,7 +55,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-school"></i></div>
                                 Home
                             </a>
-                            <a class="nav-link" href="tables.html">
+                            <a class="nav-link" href="/producto">
                                 <div class="sb-nav-link-icon"><i class="fas fa-glass-cheers"></i></div>
                                 Productos
                             </a>
