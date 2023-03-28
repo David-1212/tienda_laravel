@@ -95,5 +95,9 @@ class ProductoController extends Controller
         $producto->delete();
         return redirect('/producto');
     }
+    public function __construct() 
+    {
+        $this->middleware('auth')->except('index','show');
+    }
 
 }

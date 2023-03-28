@@ -3,8 +3,6 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
-                <!-- Logo -->
-                
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
@@ -118,8 +116,12 @@
                         </x-dropdown>
 
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">
+                            <button type="button" class="btn btn-outline-success">Ingresar</button>
+                        </a>
+                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">
+                            <button type="button" class="btn btn-outline-primary">Registrar</button>
+                        </a>
                     @endauth
                 </div>
             </div>

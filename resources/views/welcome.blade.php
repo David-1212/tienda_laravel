@@ -22,7 +22,7 @@
 
             <!-- Navbar Brand-->
             <img src="{{asset('template/resources/img/agave.png')}}"width="50" height="50">
-            <a class="navbar-brand ps-3" href="index.html">La Cruderia</a>
+            <a class="navbar-brand ps-3" >La Cruderia</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -39,15 +39,7 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Cuenta</div>
-                            <a class="nav-link" href="/login">
-                                <div class="sb-nav-link-icon"><i class="fas fa-address-book"></i></div>
-                                Iniciar sesión
-                            </a>
-                            <a class="nav-link" href="/register">
-                                <div class="sb-nav-link-icon"><i class="fas fa-address-card"></i></div>
-                                Registrarse
-                            </a>
+                            
                             <div class="sb-sidenav-menu-heading">Conócenos</div>
                             <a class="nav-link collapsed" href="/about" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="fas fa-phone-volume"><i class="fas fa-columns"></i></div>
@@ -111,7 +103,7 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
                                     <div class="card-body">Vodka</div>
-                                    <img src="{{asset('template/resources/vodka.png')}}"height="">
+                                    <img src="{{asset('template/resources/vodka.png')}}">
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                     <details>
                                         <summary>Ver detalles</summary>
@@ -135,57 +127,65 @@
                                     </div>
                                 </div>
                             </div>
+                            </div>
+                            
+                            <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Cerveza</div>
-                                    <img src="{{asset('template/resources/cerveza.webp')}}"height="300"  >
+                                    <div class="card-body">Brnady</div>
+                                    <img src="{{asset('template/resources/brandy.png')}}">
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                     <details>
                                         <summary>Ver detalles</summary>
-                                        Bebida alcohólica de sabor amargo y color amarillento, más o menos oscuro, que se obtiene por fermentación de la cebada y se aromatiza con lúpulo.
-                                    </details>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
+                                        Es un aguardiente obtenido a través de la destilación del vino, casi siempre con un 36-40 % (hasta un 60 %) de volumen de alcohol.
+                                </details>
+                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            </div>
+                        </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Brandy</div>
-                                    <img src="{{asset('template/resources/brandy.png')}}" height="300" >
+                                    <div class="card-body" hight="300">Sidra</div>
+                                    <img src="{{asset('template/resources/sidra.webp')}}">
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                     <details>
                                         <summary>Ver detalles</summary>
-                                        Es un aguardiente obtenido a través de la destilación del vino casi siempre con un 36-40 % (hasta un 60 %) de volumen de alcohol, al ser expedido al mercado.
+                                        Se trata de una bebida con alcohol que se produce a partir de la fermentación.
                                     </details>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                        
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Soju</div>
-                                    <img src="{{asset('template/resources/soju.png')}}"height="300" >
+                                    <div class="card-body">Ginebra</div>
+                                    <img src="{{asset('template/resources/ginebra.png')}}"hight="300">
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                     <details>
                                         <summary>Ver detalles</summary>
-                                        El soju es una bebida destilada nativa de Corea, tradicionalmente hecha con arroz.
+                                        La ginebra es una bebida alcohólica que proviene del destilado de cereales como el centeno, la cebada o el maíz, que se aromatiza con bayas de enebro.
+                                    </details>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Soju</div>
+                                    <img src="{{asset('template/resources/soju.webp')}}" >
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <details>
+                                        <summary>Ver detalles</summary>
+                                        El soju es una bebida destilada nativa de Corea, tradicionalmente hecha con arroz, aunque la mayoría de las marcas más importantes suplementan.
                                     </details>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Raicilla</div>
-                                    <img src="{{asset('template/resources/raicilla.png')}}"height="300" >
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <details>
-                                        <summary>Ver detalles</summary>
-                                        La raicilla es una bebida alcohólica mexicana que se produce en Jalisco y para su elaboración se emplean dos variedades: el agave lechuguilla y el agave raicillero de las especies inaequidens y maximiliana endémica del estado.
-                                </details>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                            </div>
+                           
                         </div>  
                     </div>
 
