@@ -16,9 +16,12 @@ use App\Http\Controllers\ProductoController;
 |
 */
 
+// Route::get('/', [ProductoController::class, 'index'])->name('dashboard');
+
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('/about', function () {
     return view('productos.about');
 });

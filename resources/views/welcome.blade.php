@@ -1,3 +1,5 @@
+<x-app-layout>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,7 +16,10 @@
     </head>
     
     <body class="sb-nav-fixed">
+        
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+
+
             <!-- Navbar Brand-->
             <img src="{{asset('template/resources/img/agave.png')}}"width="50" height="50">
             <a class="navbar-brand ps-3" href="index.html">La Cruderia</a>
@@ -35,11 +40,11 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Cuenta</div>
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="/login">
                                 <div class="sb-nav-link-icon"><i class="fas fa-address-book"></i></div>
                                 Iniciar sesión
                             </a>
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="/register">
                                 <div class="sb-nav-link-icon"><i class="fas fa-address-card"></i></div>
                                 Registrarse
                             </a>
@@ -216,3 +221,6 @@
         <script src="{{asset('template/js/datatables-simple-demo.js')}}datatables-simple-demo.js"></script>
     </body>
 </html>
+
+
+</x-app-layout>
