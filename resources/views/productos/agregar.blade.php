@@ -23,15 +23,15 @@
                                         <form action="/producto" method="post">
                                             @csrf
                                             <div class="form-floating mb-3">
-                                                <label for="nombrep">Nombre:</label><br><br>
-                                                <input type="text" name = "nombrep" id = "nombrep" class="form-control" value ="{{old('nombrep')}}">
+                                                <label for="nombrep"> <b>Nombre:</b></label><br><br>
+                                                <input type="text" name = "nombrep" id = "nombrep" class="form-control" placeholder="centenario" value ="{{old('nombrep')}}">
                                                 @error('nombrep')
                                                     <h5>{{ $message }}</h5>
                                                 @enderror
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <label for="precio">Precio:</label><br><br>
-                                                <input type="double" name = "precio" class="form-control" id = "precio" value ="{{old('precio')}}">
+                                                <label for="precio"><b>Precio:</b></label><br><br>
+                                                <input type="double" name = "precio" class="form-control" id = "precio"  placeholder="250" value ="{{old('precio')}}">
                                                 @error('precio')
                                                     <h5>{{ $message }}</h5>
                                                 @enderror
@@ -39,16 +39,19 @@
                                                 
                                             </div>
                                                 <div class="form-floating mb-3">
-                                                <label for="descripcion">Descripción:</label><br><br>
-                                                <input type="text" class="form-control" name = "descripcion" id = "descripcion" value ="{{old('descripcion')}}"><br><br>
+                                                <label for="descripcion"><b>Descripción: </b> </label><br><br>
+                                                <input type="text" class="form-control" name = "descripcion" id = "descripcion" placeholder="tequila" value ="{{old('descripcion')}}"><br>
                                                 @error('descripcion')
-                                                    <h5>{{ $message }}</h5>
+                                                    <h5 font-size: small >{{ $message }}</h5>
                                                 @enderror
                                             </div>
                                             
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-
-                                            <input type="submit" value="Enviar"class="btn btn-primary">
+                                            <input type="submit" value="Enviar"class="btn btn-primary btn-lg ">
+                                            <a href="/producto">
+                                                <button type="button" class="btn btn-secondary btn-lg">Regresar</button>
+                                            </a> 
+                                            
                                             </div>
                                         </form>
                                     </div>
@@ -60,18 +63,13 @@
                 </main>
             </div>
             <div id="layoutAuthentication_footer">
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; La Crudería 2023</div>
                     </div>
-                </footer>
+                </div>
+            </footer>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>

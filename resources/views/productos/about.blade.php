@@ -37,7 +37,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Cuenta</div>
-                            <a class="nav-link" href="/producto">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-address-book"></i></div>
                                 Iniciar sesión
                             </a>
@@ -46,7 +46,7 @@
                                 Registrarse
                             </a>
                             <div class="sb-sidenav-menu-heading">Conócenos</div>
-                            <a class="nav-link collapsed" href="/about" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="#" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="fas fa-phone-volume"><i class="fas fa-columns"></i></div>
                                 Acerca de nosotros
                                 <div class="sb-sidenav-collapse-arrow"></div>
@@ -57,7 +57,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-school"></i></div>
                                 Home
                             </a>
-                            <a class="nav-link" href="tables.html">
+                            <a class="nav-link" href="/producto">
                                 <div class="sb-nav-link-icon"><i class="fas fa-glass-cheers"></i></div>
                                 Productos
                             </a>
@@ -80,19 +80,24 @@
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Ulises Vallejo</div>
+                                    <div class="card-body"style="text-align: center">Ulises Vallejo</div>
                                     <img src="{{asset('template/resources/team/ulises.jpg')}}">
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         
                                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    <a href="https://github.com/UlisesVallejo"target="_blank">
+                                            <img src="{{asset('template/resources/redesS/github.svg')}}">
+                                        </a> 
+                                        <img src="{{asset('template/resources/redesS/facebook.svg')}}">
+                                        <img src="{{asset('template/resources/redesS/twitter.svg')}}">
                                     </div>
                                 </div>
                                 
                         </div>
                         <div class="col-xl-6">
                                 <div class="card mb-4">
-                                    <div class="card-header">
-                                        <br><br><strong>Quienes somos? </strong> <br><br>
+                                    <div class="card-header"style="text-align: center">
+                                        <br><br><strong >Quienes somos? </strong> <br><br>
                                     </div ><p style="text-align: justify">En nombre del equipo de desarrolladores de La Crudería, como miembros de el Centro Universitario de Ciencias Exactas e Ingenierías CUCEI, compartimos nuestra colaboración para el desarrollo web del sitio de la empresa, fungiendo así tanto David Guadalupe Vargas López como José Ulises Vallejo Sierra en los diferentes requerimientos propuestos, tanto como el desarrollo de la base de datos y el CRUD en su tabla de productos de licores y sus respectivas migraciones, el uso de sesiones dentro del sitio con la herramienta Jetstream, las validacioness en los formularios, así como la implementación de frameworks (bootstrap) para la plantilla de los estilos CSS
                                     productos. </p>
                                     <p style="text-align: justify">Somos una empresa altamente competitiva y sobre todo 100% Mexicana superando las expectativas 
@@ -101,17 +106,21 @@
                         </div>
 
                         <div class="col-xl-3 col-md-6">
-                            <div class="card bg-warning text-white mb-4">
-                                <div class="card-body">David Vargas</div>
+                            <div class="card bg-primary text-white mb-4">
+                                <div class="card-body"style="text-align: center">David Vargas</div>
                                     <img src="{{asset('template/resources/team/david.jpg')}}">
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                        
+                                        <a href="https://github.com/David-1212"target="_blank">
+                                            <img src="{{asset('template/resources/redesS/github.svg')}}">
+                                        </a> 
+                                        <img src="{{asset('template/resources/redesS/facebook.svg')}}">
+                                        <img src="{{asset('template/resources/redesS/twitter.svg')}}">
                                     </div>
-                            </div>
-                        </div>   
-                    </div>
-                            
+                                </div>
+                            </div>   
+                        </div>
+                        
 
 
                         

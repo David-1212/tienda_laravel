@@ -51,7 +51,7 @@
                             </a>
                             
                             <div class="sb-sidenav-menu-heading">Crudería</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="../">
                                 <div class="sb-nav-link-icon"><i class="fas fa-school"></i></div>
                                 Home
                             </a>
@@ -103,7 +103,10 @@
                                                 <a href="/producto/{{ $prod->id}}/edit" class="btn btn-info">Editar</a>
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">Borrar</button>
+
+                                                <a href="#" onclick="return confirm('Estás seguro que deseas eliminar el registro?');">
+                                                    <button type="submit" class="btn btn-danger">Borrar</button>
+                                                </a>
                                             </form>
                                             </td>
                                         </tr>

@@ -35,7 +35,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Cuenta</div>
-                            <a class="nav-link" href="/producto">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-address-book"></i></div>
                                 Iniciar sesión
                             </a>
@@ -51,7 +51,7 @@
                             </a>
                             
                             <div class="sb-sidenav-menu-heading">Crudería</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-school"></i></div>
                                 Home
                             </a>
@@ -105,8 +105,8 @@
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">vodka</div>
-                                    <img src="{{asset('template/resources/vodka2.png')}}"height="345">
+                                    <div class="card-body">Vodka</div>
+                                    <img src="{{asset('template/resources/vodka.png')}}"height="">
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                     <details>
                                         <summary>Ver detalles</summary>
@@ -116,6 +116,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-danger text-white mb-4">
                                     <div class="card-body">Ron</div>
@@ -172,11 +173,11 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">Raicilla</div>
-                                    <img src="{{asset('template/resources/tequila.webp')}}"height="300" >
+                                    <img src="{{asset('template/resources/raicilla.png')}}"height="300" >
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                     <details>
                                         <summary>Ver detalles</summary>
-                                        Bebida alcohólica que se obtiene por fermentación y destilación del jugo de una variedad de maguey; es originaria de México.
+                                        La raicilla es una bebida alcohólica mexicana que se produce en Jalisco y para su elaboración se emplean dos variedades: el agave lechuguilla y el agave raicillero de las especies inaequidens y maximiliana endémica del estado.
                                 </details>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>

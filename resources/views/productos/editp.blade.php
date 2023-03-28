@@ -49,7 +49,10 @@
                                             
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
 
-                                            <input type="submit" value="Enviar"class="btn btn-primary">
+                                            <input type="submit" value="Enviar"class="btn btn-primary btn-lg">
+                                            <a href="/producto">
+                                                <button type="button" class="btn btn-secondary btn-lg">Regresar</button>
+                                            </a> 
                                             </div>
                                         </form>
                                     </div>
@@ -61,18 +64,15 @@
                 </main>
             </div>
             <div id="layoutAuthentication_footer">
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; La Crudería 2023</div>
                     </div>
-                </footer>
+                </div>
+            </footer>
+
+                
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
