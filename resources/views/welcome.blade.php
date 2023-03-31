@@ -60,7 +60,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Encuéntranos como:</div>
-                        cruderíajal@gmail.com
+                    Email:cruderíajal@gmail.com
                     </div>
                 </nav>
             </div>
