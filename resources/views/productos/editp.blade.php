@@ -7,6 +7,11 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Editar</title>
+
+        <link rel="stylesheet" href="{{ asset('resources/css/app.css') }}">
+        <script src="{{ asset('resources/js/app.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
         <link href="{{asset('template/css/styles.css')}}" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
@@ -49,12 +54,33 @@
                                             
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
 
-                                            <input type="submit" value="Enviar"class="btn btn-primary btn-lg">
+                                            <input type="submit" onclick="mostrarAlerta(event)" value="Enviar"class="btn btn-primary btn-lg">
                                             <a href="/producto">
                                                 <button type="button" class="btn btn-secondary btn-lg">Regresar</button>
                                             </a> 
                                             </div>
                                         </form>
+
+                                        <script>
+                                             function mostrarAlerta(event) {
+                                                event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
+                                                Swal.fire({
+                                                    title: '¿Estás seguro?',
+                                                    text: 'Esta acción actualizará el registro. ¿Deseas continuar?',
+                                                    icon: 'warning',
+                                                    showCancelButton: true,
+                                                    confirmButtonText: 'Sí, actualizar',
+                                                    cancelButtonText: 'Cancelar'
+                                                }).then((result) => {
+                                                    if (result.isConfirmed) {
+                                                        // Si el usuario confirma, se envía el formulario
+                                                        event.target.closest('form').submit();
+                                                    }
+                                                });
+                                            }
+                                        </script>
+                                        
                                     </div>
                                     
                                 </div>

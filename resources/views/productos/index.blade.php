@@ -9,6 +9,9 @@
             <meta name="description" content="" />
             <meta name="author" content="" />
             <title>Producto</title>
+            <link rel="stylesheet" href="{{ asset('resources/css/app.css') }}">
+            <script src="{{ asset('resources/js/app.js') }}"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             <link rel="shortcut icon" href="{{asset('template/resources/img/agave.png')}}">
             <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
             <link href="{{asset('template/css/styles.css')}}" rel="stylesheet" />
@@ -97,11 +100,29 @@
                                                     <a href="/producto/{{ $prod->id}}/edit" class="btn btn-info">Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-
-                                                    <a href="#" onclick="return confirm('Estás seguro que deseas eliminar el registro?');">
-                                                        <button type="submit" class="btn btn-danger">Borrar</button>
-                                                    </a>
+                                                        <button type="submit" onclick="mostrarAlerta(event)"class="btn btn-danger">Borrar</button>
                                                 </form>
+
+                                                <script>
+                                                     function mostrarAlerta(event) {
+                                                        event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
+                                                        Swal.fire({
+                                                            title: '¿Estás seguro?',
+                                                            text: 'Esta acción eliminará el registro permanentemente. ¿Deseas continuar?',
+                                                            icon: 'warning',
+                                                            showCancelButton: true,
+                                                            confirmButtonText: 'Sí, eliminar',
+                                                            cancelButtonText: 'Cancelar'
+                                                        }).then((result) => {
+                                                            if (result.isConfirmed) {
+                                                                // Si el usuario confirma, se envía el formulario
+                                                                event.target.closest('form').submit();
+                                                            }
+                                                        });
+                                                    }
+                                                </script>
+
                                                 </td>
                                             </tr>
                                             @endforeach

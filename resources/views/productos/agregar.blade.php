@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Login - SB Admin</title>
+
+
+        <link rel="stylesheet" href="{{ asset('resources/css/app.css') }}">
+        <script src="{{ asset('resources/js/app.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
         <link href="{{asset('template/css/styles.css')}}" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+
+        
+
     </head>
     <body class="bg-primary">
         <div id="layoutAuthentication">
@@ -46,14 +56,35 @@
                                                 @enderror
                                             </div>
                                             
-                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <input type="submit" value="Enviar"class="btn btn-primary btn-lg ">
-                                            <a href="/producto">
-                                                <button type="button" class="btn btn-secondary btn-lg">Regresar</button>
-                                            </a> 
-                                            
+                                                <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                                                <input type="submit" value="Enviar"onclick="mostrarAlerta(event)"class="btn btn-primary btn-lg ">
+                                                
                                             </div>
                                         </form>
+                                        <script>
+                                              function mostrarAlerta(event) {
+                                                event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
+                                                Swal.fire({
+                                                    title: 'Registro agregado',
+                                                    text: 'El registro se ha agregado exitosamente.',
+                                                    icon: 'success',
+                                                    confirmButtonText: 'Aceptar'
+                                                }).then(() => {
+                                                    // Envía el formulario después de que se muestra la alerta
+                                                    event.target.closest('form').submit();
+                                                });
+                                            }
+                                        </script>
+                                        
+
+
+
+
+
+
+
+
                                     </div>
                                     
                                 </div>
