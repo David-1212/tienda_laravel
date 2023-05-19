@@ -13,4 +13,8 @@ class Producto extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function usuarioproductos()
+    {
+        return $this->belongsToMany(User::class, 'producto_usuario');
+    }
 }
