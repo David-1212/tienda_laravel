@@ -11,13 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('productos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->string('nombrep');
-            $table->float('precio');
-            $table->text('descripcion');
-            $table->foreign('usuario_id')->references('id')->on('users');
+        Schema::table('users', function (Blueprint $table) {
+            //
         });
     }
 
@@ -26,6 +21,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('productos');
+        Schema::table('users', function (Blueprint $table) {
+            $table->unsignedBigInteger('usuario_id')->nullable(); // Clave foránea para la relación con la tabla "productos"
+            $table->foreign('usuario_id')->references('id')->on('productos');
+        });
     }
 };

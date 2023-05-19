@@ -12,9 +12,11 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        $productos = Producto::all();
         
+        
+        $productos = Producto::all();
         return view('productos.index',compact('productos'));
+        
     }
 
     /**
@@ -51,6 +53,8 @@ class ProductoController extends Controller
      */
     public function show(Producto $producto)
     {
+        $producto = Producto::find($id);
+        $user = $producto->user;
         return view('productos.show',compact('producto'));
     }
 
@@ -69,7 +73,7 @@ class ProductoController extends Controller
      */
     public function update(Request $request, Producto $producto)
     {
-        
+        $this->authorize('update-model', $producto);
         $request->validate([
             'nombrep' => ['required', 'string', 'max:40', 'min:5'],
             'precio' => ['required', 'numeric', 'min:1'],

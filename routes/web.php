@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\ConsultaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/consulta', [ConsultaController::class, 'realizarConsulta']);
+
 Route::get('/about', function () {
     return view('productos.about');
 });
@@ -38,4 +41,6 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
 
