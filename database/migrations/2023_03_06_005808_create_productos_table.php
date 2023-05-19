@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('nombrep');
             $table->float('precio');
             $table->text('descripcion');
+            $table->unsignedBigInteger('usuario_id');
             $table->foreign('usuario_id')->references('id')->on('users')->constrained();
             
         });
