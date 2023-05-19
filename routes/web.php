@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ConsultaController;
+use App\Http\Controllers\ArchivoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,7 @@ Route::get('/about', function () {
 });
 
 Route::resource('producto', ProductoController::class);
+Route::resource('archivo', ArchivoController::class);
 
 
 Route::middleware([
