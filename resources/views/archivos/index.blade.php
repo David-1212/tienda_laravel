@@ -73,6 +73,7 @@
                                             @endforeach
                                         </tbody>
                                 </table>
+                                <a href ="../">HOME</a>
 
                                         <script>
                                              function mostrarAlerta(event) {
