@@ -73,7 +73,6 @@ class ProductoController extends Controller
      */
     public function update(Request $request, Producto $producto)
     {
-        $this->authorize('update-model', $producto);
         $request->validate([
             'nombrep' => ['required', 'string', 'max:40', 'min:5'],
             'precio' => ['required', 'numeric', 'min:1'],
