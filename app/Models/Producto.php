@@ -19,4 +19,15 @@ class Producto extends Model
     {
         return $this->belongsToMany(User::class, 'producto_usuario');
     }
+
+
+    //Accesors/Mutators
+    public function getNombrepAttribute($value){
+        return ucfirst(strtolower($value));
+    }
+
+    public function setDescripcionAttribute($value){
+        $this->attributes['descripcion'] = mb_strtoupper($value, 'UTF-8');
+    }
+
 }

@@ -13,8 +13,8 @@ class ProductoController extends Controller
     public function index()
     {
         
-        
-        $productos = Producto::all();
+        //EagerLoading
+        $productos = Producto::with('usuario')->get();
         return view('productos.index',compact('productos'));
         
     }
