@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Producto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class ProductoController extends Controller
 {
@@ -64,8 +65,11 @@ class ProductoController extends Controller
     public function edit(Producto $producto)
     {
         
-        return view('productos.editp',compact('producto'));
-        
+        if (Gate::allows('acceso.david')) {
+                return view('productos.editp', compact('producto'));
+            } else {
+                abort(403, 'No tienes permiso para editar este producto.');
+            }
     }
 
     /**
@@ -94,7 +98,10 @@ class ProductoController extends Controller
      */
     public function destroy(Producto $producto)
     {
-        
+        $this->authorize('delete', $producto); //policy
+
+
+
         $producto->delete();
         return redirect('/producto');
     }

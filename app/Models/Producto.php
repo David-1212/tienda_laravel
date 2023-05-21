@@ -30,4 +30,6 @@ class Producto extends Model
         $this->attributes['descripcion'] = mb_strtoupper($value, 'UTF-8');
     }
 
+    protected $policy = ProductoPolicy::class;
+
 }

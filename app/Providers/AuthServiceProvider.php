@@ -21,6 +21,13 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        $this->registerPolicies();
+
+        Gate::resource('producto', ProductoPolicy::class);
+
+        Gate::define('acceso.david', function ($user) {
+            return $user->name === 'David';
+        });
 
     }
 }
