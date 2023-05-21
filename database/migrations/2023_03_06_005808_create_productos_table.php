@@ -18,7 +18,7 @@ return new class extends Migration
             $table->float('precio');
             $table->text('descripcion');
             $table->unsignedBigInteger('usuario_id');
-            $table->foreign('usuario_id')->references('id')->on('users')->constrained();
+            $table->foreign('usuario_id')->references('id')->on('users')->constrained()->nullable();
             
             $table->softDeletes();
 

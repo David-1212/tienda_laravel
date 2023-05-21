@@ -51,10 +51,56 @@
                     {{ __('Already registered?') }}
                 </a>
 
-                <x-button class="ml-4">
+                <x-button class="ml-4" type="submit">
                     {{ __('Register') }}
                 </x-button>
             </div>
         </form>
+
+        @if (session('status'))
+            <div class="mt-4 font-medium text-sm text-green-600">
+                {{ session('status') }}
+            </div>
+        @endif
     </x-authentication-card>
 </x-guest-layout>
+
+@php
+use App\Mail\WelcomeEmail;
+use Illuminate\Support\Facades\Mail;
+@endphp
+
+@push('scripts')
+    <script>
+        // Ejecutar el código después de que se envíe el formulario
+        document.addEventListener('DOMContentLoaded', function () {
+            var registerForm = document.getElementById('register-form');
+
+            registerForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Evitar que se envíe el formulario de inmediato
+
+                // Realizar una solicitud AJAX para registrar al usuario
+                axios.post('{{ route('register') }}', new FormData(registerForm))
+                    .then(function (response) {
+                        // Éxito al registrar al usuario
+                        // Enviar el correo electrónico personalizado
+                        axios.post('{{ route('send-welcome-email') }}', {
+                            email: registerForm.email.value
+                        })
+                        .then(function (response) {
+                            console.log('Correo electrónico de bienvenida enviado.');
+                        })
+                        .catch(function (error) {
+                            console.error('Error al enviar el correo electrónico de bienvenida:', error);
+                        });
+
+                        
+                    })
+                    .catch(function (error) {
+                        // Error al registrar al usuario
+                        console.error('Error al registrar al usuario:', error);
+                    });
+            });
+        });
+    </script>
+@endpush

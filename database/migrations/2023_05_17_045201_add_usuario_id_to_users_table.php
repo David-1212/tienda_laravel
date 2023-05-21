@@ -23,7 +23,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->unsignedBigInteger('usuario_id')->nullable(); // Clave foránea para la relación con la tabla "productos"
-            $table->foreign('usuario_id')->references('id')->on('productos');
+            $table->foreign('usuario_id')->references('id')->on('productos')->nullable();
         });
     }
 };

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('producto_usuario', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('usuario_id');
-            $table->foreign('usuario_id')->references('id')->on('users')->onDelete('cascade')->consttained();
+            $table->foreign('usuario_id')->references('id')->on('users')->onDelete('cascade')->consttained()->nullable();
             $table->unsignedBigInteger('productos_id');
             //$table->foreign('productos_id')->references('id')->on('productos')->onDelete('cascade')->constrained();
             $table->timestamps();
