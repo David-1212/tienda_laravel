@@ -136,7 +136,7 @@
                             <div class="container-fluid px-4">
                                 <div class="d-flex align-items-center justify-content-between small">
                                     <div class="text-muted">Copyright &copy; La Crudería 2023
-                                        
+                                        <a href ="../archivo">Autenticarme</a>
                                     </div>
                                 </div>
                             </div>
